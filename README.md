@@ -1,5 +1,5 @@
 ## epsMAg-ES
-# Matlab code of the epsMAg-ES for constrained optimization problems
+ Matlab code of the epsMAg-ES for constrained optimization problems
 
 1. ### REFERENCE:  
    
@@ -17,3 +17,11 @@
   This repository includes the benchmarking functions corresponding to the <b>"CEC 2018 competition on constrained single objective real-parameter optimization"</b> that are freely available on the website <href>http://www.ntu.edu.sg/home/epnsugan/index_files/CEC2018/CEC2018.htm</href>
 
 5. ### Content:
+* __Main_epsMAgES.m__ - Executable for running the epsMAg-ES on the correspondinng benchmarking problems
+* __epsMAgES.m__ - Main component of the epsMAg-Es algorithm (based on the MA-ES)
+* __eps_sort.m__ - Sorting routine for ranking candidate solutions w.r.t. the epsilon-level ordering
+* __eps_rank.m__ - Subroutine of __eps_sort__
+* __keep_range.m__ - Box-constraint handling method (reflection into the box)
+* __gradientMutation.m__ - Implementation of the gradient-based repair step
+* __build_stats.m__ - Postprocessing routine that builds the statistcs to be reported to the CEC 2018 competition
+* __CEC2018.m__ - Constrained functions specified for the CEC 2017 and 2018 competitions
