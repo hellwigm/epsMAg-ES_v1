@@ -53,7 +53,7 @@ function [out,global_best]=epsMAgES(problem,input,CEC_fun_no)
     global_best.conv    = best_conv;
     
     % Upper mutation strength bound
-    sigmaMAX            = 100;
+    sigmaMAX            = (max(problem.upper_bounds)-min(problem.lower_bounds))/2;
     flag1               = 0;
     flag2               = 0;
     
@@ -138,6 +138,7 @@ function [out,global_best]=epsMAgES(problem,input,CEC_fun_no)
         siMM = MM < -1e+12;
         if sum(sum(liMM))>1 || sum(sum(siMM))>1
             MM = eye(input.dim);
+	    ps = ones(input.dim,1);
         end
         
         % Adapt the mutation strength 
