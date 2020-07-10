@@ -36,11 +36,11 @@
 
   The algortihm has the following inputs:
 * problem - Matlab structure array that includes a description of the problem
-  > problem.constr_fun_name -- Name of the constrained function to be executed
-  > problem.lb -- vector of the lower parameter vector bounds
-  > problem.ub -- vector of the upper parameter vector bounds
-  > problem.gn -- Number of inequality constraints
-  > problem.hn -- Number of equality constraints
+  > problem.constr_fun_name -- Name of the constrained function to be executed, 
+  > problem.lb -- vector of the lower parameter vector bounds, 
+  > problem.ub -- vector of the upper parameter vector bounds, 
+  > problem.gn -- Number of inequality constraints, 
+  > problem.hn -- Number of equality constraints.  
 "The latter two being needed for the CEC benchmark specific approach for normalizing the constraint violation."
 
 * input   - Matlab structure array specifying all necessary strategy parameters of the algorithm (population sizes, initial mutation strength, learning rates, etc.)
@@ -49,10 +49,10 @@
 For details refer to the file __Main_epsMAgES.m__  or to the paper.
 
   During execution, __epsMAg-ES.m__ repeatedly calls up the subroutines
-  > __eps_sort.m__ 
-  > __eps_rank.m__ 
-  > __keep_range.m__ 
-  > __gradientMutation.m__
+  > __eps_sort.m__, 
+  > __eps_rank.m__,  
+  > __keep_range.m__,  
+  > __gradientMutation.m__, 
 that do not need to be individually configured.
 
   The epsMAg-ES produces the following outputs:
